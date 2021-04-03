@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![family](/images/family.png)
+<img src="/images/family.png" alt="family" width="540" height="405">
 
 I just graduated from Harvard Health Data Science program and currently am working at Aetna as a Software Engineer. Previously I studied Nano Science at NCTU in Taiwan, mainly focusing on semiconductor fabrication. Since then, I have taken a huge pivot, now I am a software developer that focus on digitising the healthcare experience.
 
