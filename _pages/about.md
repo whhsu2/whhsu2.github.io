@@ -4,26 +4,8 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+![family](/images/family.png)
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+I just graduated from Harvard Health Data Science program and currently am working at Aetna as a Software Engineer. Previously I studied Nano Science at NCTU in Taiwan, mainly focusing on semiconductor fabrication. Since then, I have taken a huge pivot, now I am a software developer that focus on digitising the healthcare experience.
 
-## Features
-
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
-
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+In leasure time, I write about random stuff that I'm interested in (my blog posts). I write some full stack and front end projects. Besides coding, I started to learn Piano and reading sheet music since the quarantine. Huge fan of FKJ ( French Kiwi Juice).
