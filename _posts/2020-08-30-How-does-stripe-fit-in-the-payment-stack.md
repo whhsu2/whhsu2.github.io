@@ -1,6 +1,3 @@
-
-# How does Stripe fit in the Payment Stack
-
 Stripe is a payment API company that is founded by Irish entrepreneur brothers John and Patrick Collison. Stripe has became extremely popular by building a payment infrastructure that is developer centric. Its customers include companies such as Shopify and Lyft.
 
 In this article I will explain
