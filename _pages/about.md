@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 
 permalink: /about/
 ---
 I'm a data engineer at Aetna in New York. Currently working in Spark to build ML models to increase our member engagement. I'm interested in using Machine learning to digitise the healthcare experience. You can find my resume [here](https://drive.google.com/file/d/1IvXepAA_bAsmzcd7jGXxqYWH6o0k12q_/view?usp=sharing)
