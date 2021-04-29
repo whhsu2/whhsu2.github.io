@@ -11,7 +11,7 @@ In this article I will explain
 1. Who are the competitors of Stripe
 
 ## What does Stripe do ?
-> ***Stripe is a technology company that builds economic infrastructure for the internet. Businesses of every size — from new startups to public companies — use our software to accept payments and manage their businesses online.***
+> ***Stripe is a technology company that builds economic infrastructure for th21.30e internet. Businesses of every size — from new startups to public companies — use our software to accept payments and manage their businesses online.***
 
 This is from [Stripe about page](https://stripe.com/about#:~:text=Stripe is a technology company,and manage their businesses online). Put it simply, Stripe allows businesses to accept money on the internet. Stripe has public companies using their service such as Shopify, Lyft, DoorDash and Instacart. Stripe also has a lot of small business customers. In 2017, Stripe acquired [IndieHacker](https://techcrunch.com/2017/04/11/stripe-acquires-indie-hackers-a-knowledge-sharing-community-for-entrepreneurs/), it is a website where founders of mostly independent business can share their stories transparently, and where entrepreneurs can come to read and learn from those examples. This serves as a gateway to let Stripe collect payments for these small business. In order to further understand how Stripe fits in the payment first we need to talk about the process of payment.
 
