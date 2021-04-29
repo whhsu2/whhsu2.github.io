@@ -98,7 +98,9 @@ On top of that, ORC provides additional optimization. In each file footer, it st
 
 
 ## Final Thoughts
-To conclude, OLTP is used by end-user/customer via web applications and OLAP is used by a business analyst for making decisions. Due to it's use cases, OLAP systems uses dimensional modeling, column-oriented storage and compression methods to optimize for performance. This is a short summary of why anyone should use data warehouses and how do Data warehouses optimize for OLAP analysis. If you want to understand more, I highly recommend reading *Designing Data-Intensive Applications*.
+To conclude, OLTP is used by end-user/customer via web applications and OLAP is used by a business analyst for making decisions. Due to it's use cases, OLAP systems uses dimensional modeling, column-oriented storage and compression methods to optimize for performance. This is a short summary of why anyone should use data warehouses and how do Data warehouses optimize for OLAP analysis. If you want to understand more, I highly recommend reading *Designing Data-Intensive Applications*. 
+
+*Thank you Jinnie and Ved for reading drafts of this.*
 
 ## Reference
 - [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321)
