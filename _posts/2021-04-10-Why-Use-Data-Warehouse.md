@@ -1,5 +1,5 @@
 During my first job, I was looking at the organization's technical architecture. And saw that we had multiple databases set up. We had MySQL databases, Hive, and Hadoop. From the surface, they all seem the same to me. As a user, you would enter the SQL language to access the data. I wondered why we didn't just use MySQL database for everything. Why go through all the trouble of setting up Hive and Hadoop.
-After digging deeper, I started to understand the difference between traditional databases ( MySQL ) and data warehouses ( Hive + Hadoop )and the concept of OLTP and OLAP. Here I would like to elaborate on my learnings. Most of my content here is from the book.
+After digging deeper, I started to understand the difference between traditional databases ( MySQL ) and data warehouses ( Hive + Hadoop )and the concept of OLTP and OLAP. Here I would like to elaborate on my learnings. 
 
 ## What is a Database 
 On the most fundamental level, a database needs to do two things:
@@ -101,7 +101,7 @@ On top of that, ORC provides additional optimization. In each file, it stores me
 To conclude, OLTP are used by end-user/customer via web applications and OLAP is used by a business analyst for making decisions. Due to it's use cases, OLAP systems uses dimensional modeling, column-oriented storage and compression methods to optimize for performance. This is a short summary of why anyone should use data warehouses and how do Data warehouses optimize for OLAP analysis. If you want to understand more, I highly recommend reading *Designing Data-Intensive Applications*.
 
 ## Reference
-- https://www.stitchdata.com/columnardatabase/
+- [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321)
 - https://stackoverflow.com/questions/42416236/what-is-the-difference-between-inputformat-outputformat-stored-as-in-hive
 - https://docs.oracle.com/cd/B10500_01/server.920/a96520/concept.htm
 - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC#LanguageManualORC-ORCFiles
