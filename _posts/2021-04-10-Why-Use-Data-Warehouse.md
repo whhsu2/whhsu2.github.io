@@ -1,4 +1,4 @@
-During my first job, I was looking at the organization's technical architecture. And saw that we had multiple databases set up. We had MySQL databases, Hive, and Hadoop. From the surface, they all seem the same to me. As a user, you would enter the SQL language to access the data. I wondered why we didn't just use MySQL database for everything. Why go through all the trouble of setting up Hive and Hadoop.
+During my first job, I was looking at the organization's technical architecture. And saw that we had multiple databases set up. We had MySQL databases, Hive and Hadoop. From the surface, they all seem the same to me. As a user, you would enter the SQL language to access the data. I wondered why we didn't just use MySQL database for everything. Why go through all the trouble of setting up Hive and Hadoop.
 After digging deeper, I started to understand the difference between traditional databases ( MySQL ) and data warehouses ( Hive + Hadoop )and the concept of OLTP and OLAP. Here I would like to elaborate on my learnings. 
 
 ## What is a Database 
@@ -8,8 +8,8 @@ On the most fundamental level, a database needs to do two things:
 
 In the beginning, databases started being used for many different kinds of data - what products have been bought, a money transaction, a click on your website, etc. - the basic access pattern remained similar to processing business transactions. An application typically looks up a small number of records by some key. Records are inserted or updated based on the user's/application input. Because these applications are interactive, the access patterns became known as OnLine Transaction Processing (OLTP).
 However, databases also started being increasingly used for data analytics, which has very different access patterns. Usually, an analytic query needs to scan over a huge number of records, only reading a few columns per record, and calculates aggregate statistics ( such as count, sum, or average ) rather than returning the raw data to the user. For example, if your data is a table of member interactions with your email, then analytic queries might be
-What was the total number of customers that clicked on our email?
-In user's who clicked on our email, how many of them bought our product in the past 60 days?
+1. What was the total number of customers that clicked on our email?
+2. Out of the users who clicked on our email, how many of them bought our product in the past 60 days?
 
 In order to differentiate this pattern of using databases from transaction processing, it has been called OnLine Analytic Processing (OLAP).
 At first, the same databases were used for both transaction processing and analytic queries. That worked fine when you're dealing with small amounts of data. However, if you're working with terabytes/petabytes of data and joining on multiple tables, this could take up a lot of computing resources and time. Since OLTP systems are usually expected to be highly available and to process transactions with low latency because they are often critical to the operations of the business. Organizations created a new database system for analytics queries that are expensive, scans large parts of the dataset. This separate database was called a data warehouse.
@@ -20,7 +20,7 @@ A data warehouse, by contrast, is a separate database that analysts can query ho
 ![data warehouse](../images/datawarehouse.png)
 
 
-In the above diagram, records are inserted into OLTP databases by the user/application. They are then run on a batch or streaming basis and imported into OLAP databases. When imported into data warehouse, the data is also transformed to the suitable schema, which are often times dimensional modeling 
+In the above diagram, records are inserted into OLTP databases by the user/application. They are then run on a batch or streaming basis and imported into OLAP databases. When imported into data warehouse, the data is also transformed to the suitable schema, which is often times dimensional modeling.
 In our example given at the beginning of the article, Website/users would insert records into MySQL (OLTP database). Then the records in MySQL would be extracted, transformed and loaded into Hive + Hadoop (OLAP database).
 A big advantage of using a separate data warehouse, rather than querying OLTP systems directly for analytics, is that the data warehouse can be optimized for analytic access patterns. So what are the different techniques used to optimize OLAP?
 
@@ -94,11 +94,11 @@ select * from ninjas where Village= 'HiddenLeaf'
 
 For each stripe, ORC files will only decompress the ```Village``` column and will check if the column value matchs ```HiddenLeaf```, if it matches, then other columns are decompressed to fetch the entire row. This is also referred to as lazy decompression. 
 
-On top of that, ORC provides additional optimization. In each file, it stores metadata about each stripe and it's columns. For instance, it stores the min, max value of each column in each stripe. If the desired column value isn't in the range of the column value, ORC can directly skip the stripe without having to decompress the column to check. To understand more,  [Here](https://orc.apache.org/specification/ORCv1/) is a detailed explanation of the ORC file format. 
+On top of that, ORC provides additional optimization. In each file footer, it stores metadata about each stripe and it's columns. For instance, it stores the min, max value of each column in each stripe. If the desired column value isn't in the range of the column value, ORC can directly skip the stripe without having to decompress the column to check. To understand more,  [Here](https://orc.apache.org/specification/ORCv1/) is a detailed explanation of the ORC file format. 
 
 
 ## Final Thoughts
-To conclude, OLTP are used by end-user/customer via web applications and OLAP is used by a business analyst for making decisions. Due to it's use cases, OLAP systems uses dimensional modeling, column-oriented storage and compression methods to optimize for performance. This is a short summary of why anyone should use data warehouses and how do Data warehouses optimize for OLAP analysis. If you want to understand more, I highly recommend reading *Designing Data-Intensive Applications*.
+To conclude, OLTP is used by end-user/customer via web applications and OLAP is used by a business analyst for making decisions. Due to it's use cases, OLAP systems uses dimensional modeling, column-oriented storage and compression methods to optimize for performance. This is a short summary of why anyone should use data warehouses and how do Data warehouses optimize for OLAP analysis. If you want to understand more, I highly recommend reading *Designing Data-Intensive Applications*.
 
 ## Reference
 - [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321)
