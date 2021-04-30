@@ -105,5 +105,4 @@ To conclude, OLTP is used by end-user/customer via web applications and OLAP is 
 ## Reference
 - [Designing Data-Intensive Applications](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321)
 - https://stackoverflow.com/questions/42416236/what-is-the-difference-between-inputformat-outputformat-stored-as-in-hive
-- https://docs.oracle.com/cd/B10500_01/server.920/a96520/concept.htm
-- https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC#LanguageManualORC-ORCFiles
+
